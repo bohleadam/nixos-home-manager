@@ -88,9 +88,7 @@
   programs.oh-my-posh = {
     enable = true;
     enableZshIntegration = true;
-    configFile = builtins.readFile(builtins.fetchurl {
-      url = "https://raw.githubusercontent.com/bohleadam/oh-my-posh-server-theme/refs/heads/main/bohlea-server.omp.json";
-      sha256 = "vB2E9i+yJM4kAvSalLMlK+0f7BizJpMc/uSISWtEWDs=";
+    useTheme = "Hunk";
     });
   };
 
