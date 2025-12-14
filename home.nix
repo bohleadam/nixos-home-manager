@@ -38,10 +38,7 @@
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
-  home.file = {".config/oh-my-posh/bohlea-server.omp.json".source = pkgs.fetchurl {
-  url = "https://raw.githubusercontent.com/bohleadam/oh-my-posh-server-theme/refs/heads/main/bohlea-server.omp.json";
-  sha256 = "vB2E9i+yJM4kAvSalLMlK+0f7BizJpMc/uSISWtEWDs=";
-};
+  home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
@@ -91,7 +88,9 @@
   programs.oh-my-posh = {
     enable = true;
     enableZshIntegration = true;
-    configFile = ".config/oh-my-posh/bohlea-server.omp.json";
+    configFile = builtins.readFile(builtins.fetchurl {
+      url = "https://raw.githubusercontent.com/bohleadam/oh-my-posh-server-theme/refs/heads/main/bohlea-server.omp.json";
+    });
   };
 
   programs.git = {
