@@ -85,6 +85,12 @@
     };
   };
 
+  programs.oh-my-posh = {
+    enable = true;
+    useTheme = "hunk";
+
+  };
+
   programs.git = {
    enable = true;
    settings = {
