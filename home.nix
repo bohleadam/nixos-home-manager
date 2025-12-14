@@ -88,7 +88,7 @@
   programs.oh-my-posh = {
     enable = true;
     enableZshIntegration = true;
-    useTheme = "Hunk";
+    useTheme = "hunk";
     });
   };
 
