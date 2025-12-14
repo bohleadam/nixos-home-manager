@@ -90,8 +90,7 @@
 
   programs.oh-my-posh = {
     enable = true;
-    configFile = "/home/bohlea/.config/oh-my-posh/bohlea-server.omp.json";
-
+    configFile = ".config/oh-my-posh/bohlea-server.omp.json";
   };
 
   programs.git = {
