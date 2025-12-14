@@ -89,7 +89,7 @@
     enable = true;
     enableZshIntegration = true;
     useTheme = "hunk";
-    });
+    };
   };
 
   programs.git = {
